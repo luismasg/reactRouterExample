@@ -15,8 +15,8 @@
 
 si te interesa seguir practicando podrias: 
 
-- [x] Extrear  los FancyLinks a una navLinksList y usar useLocation para obtener los links 
-- [ ] Mejorar el active state de los links, el color
-  - [ ] cambiar los Links de Comp2 por FancyLinks y usar Match para desacoplar la ruta padre y  ademas que se iluminen S
+- [x] Extraer los FancyLinks a una navLinksList y usar useLocation para obtener los links 
+- [ ] Mejorar el color del active state de los FancyLinks
+  - [ ] cambiar los Links de Comp2 por FancyLinks para que se iluminen  y  usar Match para desacoplar la ruta padre
 - [ ] Agregar una Route default "/" donde pondrias una mensaje de bienvenida
-- [ ] borrar arhivos extras,  y acomodar el css propiamente
+- [ ] Borrar arhivos extras,  y acomodar el css propiamente
