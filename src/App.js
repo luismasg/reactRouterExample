@@ -5,6 +5,7 @@ import { Route, Switch, Link, useLocation, Redirect } from 'react-router-dom';
 import Comp1 from './components/comp1';
 import Comp2 from './components/comp2';
 import FancyLink from './components/fancyLink';
+import LinksList from './components/LinksList';
 
 const AuthGuardian = ({ isLogged, Authed, Notauth }) => {
   if (isLogged) {
@@ -20,26 +21,15 @@ function App(props) {
   const [isLogged, setLogged] = useState(true);
 
   // useEffect (()=>{
-
   //   checkIfAuth () .then (user => setLogged(user))
   // },[]);
 
-  // if (pathname === '/') {
-  //   return <Redirect to="/admin" />;
-  // }
+  if (pathname === '/') {
+    return <Redirect to="/admin" />;
+  }
   return (
     <div className="App">
-      <div style={styles.navbar}>
-        <FancyLink to="/admin" pathname={pathname}>
-          Ir a admin
-        </FancyLink>
-        <FancyLink to="/users" pathname={pathname}>
-          Ir a users
-        </FancyLink>
-        <FancyLink to="/dashboard" pathname={pathname}>
-          ir a Dashboard
-        </FancyLink>
-      </div>
+      <LinksList />
       <h1>Hello world</h1>
       <hr />
       <Switch>
@@ -65,13 +55,3 @@ function App(props) {
 }
 
 export default App;
-
-const styles = {
-  navbar: {
-    color: 'white',
-    backgroundColor: 'grey',
-    // padding: 15,
-    display: 'flex',
-    justifyContent: 'space-around'
-  }
-};
